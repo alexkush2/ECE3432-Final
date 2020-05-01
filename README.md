@@ -1,16 +1,16 @@
 # ECE3432-Final
 https://github.com/alexkush2/ECE3432-Final
 
-## Inital Setup on Pi
-Run setup script to install libraries and download all images
+## Inital Setup on Raspberry Pi
+Run setup script to install libraries and download all images:
 `./setup.sh`
 
 ## Run Testing
 Run model testing script to test image prediction 
-`python3 rcCarModelTest.py`
+`python3 rcCarModelTest.py`.
 Prints out total accumulated loss, accuracy, predicted value and the time it took to predict on one image
 
-### My testing resutls from pi
+### Results
 ![Test Results](snip.PNG)
 
 ## Configuration

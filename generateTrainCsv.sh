@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if command -v svn >/dev/null 2>&1 ; then
+    echo "Running generateTrainCsv.sh"
+else
+    echo "Error! svn not found!"
+    echo "try 'sudo apt install subversion' and re-run this script."
+fi
+
 # number of images to add to training file
 num=5000
 
@@ -8,6 +15,7 @@ if [ $# = 1 ]
 then 
     num=$1
 fi
+echo "Using $num training images"
 
 # see if data/images exists
 if [ ! -d data/images/ ]
@@ -28,14 +36,17 @@ then
     if [ -e data/list/train_1.csv ]
     then
         # if yes, remove csv
+        echo "Removing pre-existing train_1.csv"
         rm data/list/train_1.csv
     fi
 # if not make directory
 else
+    echo "Making /data/list dir"
     mkdir data/list
 fi
 
 # add the word 'image' to top of file
+echo "Creating train_1.csv"
 echo image >> data/list/train_1.csv
 
 # add $num number of random images to the file
