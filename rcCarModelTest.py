@@ -10,7 +10,12 @@ from av_parse_data import ParseData
 TEST_LIST = "data/list/test_1.csv"
 SETTINGS = "data/set_accuracy_test.json"
 
-data = pd.read_csv(TEST_LIST)
+try:
+    data = pd.read_csv(TEST_LIST)
+except:
+    print("Error! you are missing test_1.csv")
+    exit()
+
 parsedata = ParseData()
 with open(SETTINGS) as fp:
     content = json.load(fp)

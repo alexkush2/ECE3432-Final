@@ -1,0 +1,4 @@
+# exclude test data
+data/images
+data/list
+*.jpg

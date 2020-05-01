@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-pip3 install cython pandas numpy future pillow opencv-python
+pip3 install cython pandas numpy future pillow opencv-python torch torchvision
 
 wget https://github.com/lbaitemple/ubuntu_server_rpi/raw/master/torch/torch-1.6.0a0%2B521910e-cp36-cp36m-linux_armv7l.whl
 pip3 install torch-1.6.0a0+521910e-cp36-cp36m-linux_armv7l.whl
