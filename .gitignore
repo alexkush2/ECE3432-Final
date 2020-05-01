@@ -2,3 +2,7 @@
 data/images
 data/list
 *.jpg
+
+# python sources and binaries
+*.pyc
+*.whl
