@@ -1,5 +1,3 @@
-#!/bin/bash
-
 if command -v svn >/dev/null 2>&1 ; then
     echo "Running generateTrainCsv.sh"
 else
