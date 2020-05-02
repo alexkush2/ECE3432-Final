@@ -20,7 +20,7 @@ The following can be installed via `pip3`, and are included in `setup.sh`:
 - `matplotlib`
 
 Other:
-- (torch and torchvision)[https://pytorch.org/get-started/locally/]
+- [torch and torchvision](https://pytorch.org/get-started/locally/)
 
 ## Directions
 0. Install pytorch and torchvision
