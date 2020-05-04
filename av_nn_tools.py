@@ -291,7 +291,7 @@ class NNTools:
                 running_loss = 0.0
                 start = timeit.default_timer()
 
-        print('Total accumulated loss = %2.7f' % (total_loss / data_count))
+        print('\n\nTotal accumulated loss = %2.7f' % (total_loss / data_count))
         return None
 
     #
