@@ -3,11 +3,11 @@ https://github.com/alexkush2/ECE3432-Final
 
 ## Depedencies
 
-The following can be installed via `apt`:
+The following can be installed via `apt`, and are included in `setup.sh:
 - `subversion`
 - `wget`
 
-The following can be installed via `pip3`, and are included in `setup.sh`:
+The following can be installed via `pip3`, and are also included in `setup.sh`:
 - `cython`
 - `pandas`
 - `numpy`
