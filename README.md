@@ -3,7 +3,7 @@ https://github.com/alexkush2/ECE3432-Final
 
 ## Depedencies
 
-The following can be installed via `apt`, and are included in `setup.sh:
+The following can be installed via `apt`, and are included in setup.sh:
 - `subversion`
 - `wget`
 
