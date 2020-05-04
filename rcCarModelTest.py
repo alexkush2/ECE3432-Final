@@ -26,10 +26,15 @@ with open(SETTINGS) as fp:
 
 servo_count = 0
 
+total_time = 0
+
 for index in range(len(data)):
     _, servo, motor = parsedata.parse_data(data["image"][index])
 
+    start_time = time.time()
     pred_servo = servo_pred.predict(data["image"][index])
+    end_time = time.time()
+    total_time += (end_time - start_time)
 
     if abs(servo - pred_servo) <= content['error_margin']:
         # print(servo)
@@ -43,16 +48,12 @@ for index in range(len(data)):
         print("[%5d] servo: %2.2f " % \
               (index + 1, 100 * servo_count / (index + 1), ))
 
-# print("servo: %2.2f" % (100 * servo_count / (index + 1)))
-
-
-IMAGE_FILE = "data/images/03_12_2020_0/output_0002/i0001053_s17_m17.jpg"
 
 servo_pred.test(TEST_LIST)
-start_time = time.time()
-servov=servo_pred.predict(IMAGE_FILE)
-end_time = time.time()
 
-print("\n\nservo: %2.2f" % (100 * servo_count / (index + 1)))
-print("predicted: " + str(servov))
-print("time: " + str(end_time-start_time))
+# print("servo: %2.2f" % (100 * servo_count / (index + 1)))
+
+total_time = total_time / len(data)
+
+print("Servo Accuracy: %2.2f" % (100 * servo_count / (index + 1)))
+print("Average Time: " + str(total_time))
